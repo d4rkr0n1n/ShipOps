@@ -437,6 +437,9 @@ h2 em {
   padding: 30px 28px;
   box-shadow: 12px 12px 0 rgba(96, 165, 250, 0.2);
 }
+.testimonial-card + .testimonial-card {
+  margin-top: 24px;
+}
 :root[data-theme="dark"] .testimonial-card {
   background: rgba(21, 27, 24, 0.9);
 }

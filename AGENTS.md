@@ -29,6 +29,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Content And Integrations
 
 - Keep pricing and page content in the data structures at the top of `app/page.tsx` unless content management is introduced deliberately.
+- Keep testimonials in the `testimonials` data array in `app/page.tsx`; each entry's name, quote, and LinkedIn URL are rendered together in the testimonial section.
 - Preserve the current pricing order unless explicitly requested: Lite Audit appears first, Audit is the featured/most popular weekly plan, and Launch follows it.
 - Keep weekly capacity labels, the ad hoc payment model, and the one-time Lite Audit distinction consistent in the cards, contact dialog, README, legal policies, and any future checkout flow.
 - The contact address and plan-specific email template live in `app/contact-dialog.tsx`; update both the visible flow and generated mailto/QR content together.

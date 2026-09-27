@@ -103,12 +103,20 @@ const experience = [
   "Integrated DevSecOps checks (SAST, SCA, secrets hygiene) into CI/CD pipelines, helping cut vulnerability occurrences by ~35%.",
   "Collaborated with cross-functional tech + operations teams to streamline deployments, shrinking release cycles from weekly to 2–3 days.",
 ];
-const testimonial = {
-  name: "Shivanshu Dixit",
-  quote:
-    "I teamed up with Mridul on a side project, and his DevOps contributions were a game changer. He took total ownership of setting up our CI/CD pipeline and cloud infrastructure—provisioning AWS EC2 instances, configuring Elastic Load Balancing, and managing the entire SSL setup via Terraform. His work took the headache out of deployments and gave our project a solid, production-grade foundation.",
-  linkedinUrl: "https://www.linkedin.com/in/shivanshudixit/",
-};
+const testimonials = [
+  {
+    name: "Shivanshu Dixit",
+    quote:
+      "I teamed up with Mridul on a side project, and his DevOps contributions were a game changer. He took total ownership of setting up our CI/CD pipeline and cloud infrastructure—provisioning AWS EC2 instances, configuring Elastic Load Balancing, and managing the entire SSL setup via Terraform. His work took the headache out of deployments and gave our project a solid, production-grade foundation.",
+    linkedinUrl: "https://www.linkedin.com/in/shivanshudixit/",
+  },
+  {
+    name: "Sujith K G",
+    quote:
+      "I had the privilege of working with Mridul during our stint at SBI YONO Project. He had always amazed me with his technical knowledge and skills which he always keeps up-to-date. He is an expert in solving any kind of DevSecOps problems with his out of the box thinking. I would definitely recommend Mridul as he is the best person who can provide reliable solutions to any technical challenges.",
+    linkedinUrl: "https://www.linkedin.com/in/sujithkg001/",
+  },
+];
 const scope = {
   included: [
     "Infrastructure and delivery work in your existing cloud accounts",
@@ -380,39 +388,38 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        <article className="testimonial-card">
-          <div className="testimonial-header">
-            <div
-              className="testimonial-avatar"
-              aria-hidden="true"
-            >
-              {testimonial.name
-                .split(" ")
-                .filter(Boolean)
-                .map((part) => part[0])
-                .join("")
-                .slice(0, 2)
-                .toUpperCase()}
+        {testimonials.map((testimonial) => (
+          <article className="testimonial-card" key={testimonial.name}>
+            <div className="testimonial-header">
+              <div className="testimonial-avatar" aria-hidden="true">
+                {testimonial.name
+                  .split(" ")
+                  .filter(Boolean)
+                  .map((part) => part[0])
+                  .join("")
+                  .slice(0, 2)
+                  .toUpperCase()}
+              </div>
+              <div>
+                <p className="testimonial-name">{testimonial.name}</p>
+                <a
+                  className="testimonial-link"
+                  href={testimonial.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${testimonial.name} on LinkedIn`}
+                  title="LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M5.2 6.8A1.7 1.7 0 1 0 5.2 3.4a1.7 1.7 0 0 0 0 3.4ZM3.7 20.6h3V8.5h-3v12.1ZM8.6 8.5h2.9v1.65h.04c.4-.76 1.38-1.96 3.03-1.96 3.24 0 3.84 2.13 3.84 4.9v7.51h-3v-6.66c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.72-2.55 3.51v6.78h-3V8.5Z" />
+                  </svg>
+                  LinkedIn
+                </a>
+              </div>
             </div>
-            <div>
-              <p className="testimonial-name">{testimonial.name}</p>
-              <a
-                className="testimonial-link"
-                href={testimonial.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${testimonial.name} on LinkedIn`}
-                title="LinkedIn"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M5.2 6.8A1.7 1.7 0 1 0 5.2 3.4a1.7 1.7 0 0 0 0 3.4ZM3.7 20.6h3V8.5h-3v12.1ZM8.6 8.5h2.9v1.65h.04c.4-.76 1.38-1.96 3.03-1.96 3.24 0 3.84 2.13 3.84 4.9v7.51h-3v-6.66c0-1.59-.03-3.63-2.21-3.63-2.21 0-2.55 1.72-2.55 3.51v6.78h-3V8.5Z" />
-                </svg>
-                LinkedIn
-              </a>
-            </div>
-          </div>
-          <blockquote>{testimonial.quote}</blockquote>
-        </article>
+            <blockquote>{testimonial.quote}</blockquote>
+          </article>
+        ))}
       </section>
       <section className="scope" id="scope">
         <div className="shell">

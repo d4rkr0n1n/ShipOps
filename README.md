@@ -8,6 +8,7 @@ ShipOps is a single-page website for subscription DevOps services for Indian sta
 
 - Service overview for CI/CD, Terraform, cloud operations, Kubernetes, observability, and GitOps
 - Example deliverables including CI/CD pipelines, cloud infrastructure, monitoring, alerts, and reliability upgrades
+- Testimonials from project collaborators
 - Clear included and excluded work boundaries
 - Async, one-active-request operating model and three-step process explanation
 - Weekly capacity plans and a one-time offer in INR, paid on an ad hoc basis:

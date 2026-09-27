@@ -12,9 +12,9 @@ ShipOps is a single-page website for subscription DevOps services for Indian sta
 - Clear included and excluded work boundaries
 - Async, one-active-request operating model and three-step process explanation
 - Weekly capacity plans and a one-time offer in INR, paid on an ad hoc basis:
-	- **Lite Audit**: Rs 199 one-time offer, shown first
-	- **Audit**: Rs 399/week, marked as the most popular plan
-	- **Launch**: Rs 899/week
+	- **Lite Audit**: ₹ 199 one-time offer, shown first
+	- **Audit**: ₹ 399/week, marked as the most popular plan
+	- **Launch**: ₹ 899/week
 - Contact dialog with a plan-specific email template and `mailto:` links
 - QR codes for the contact email and generated email template
 - Expandable Legal & Policies section covering Terms of Service, Privacy Policy, refunds, cancellation, service agreements, statements of work, data access, credentials, liability, and availability
